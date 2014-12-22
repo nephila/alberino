@@ -6,7 +6,7 @@ void LadderAnimation::drawFrame() {
     unsigned int leds = getTotalLeds();
     for (int led = 0 ; led < leds ; led++) {
         digitalWrite(led, HIGH);
-        delay(10);
+        delay(100);
         digitalWrite(led, LOW);
     }
 };
