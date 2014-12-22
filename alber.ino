@@ -21,8 +21,15 @@ void setup() {
     animations.insert((new AlternateAnimation())->setTotalLeds(TOTAL_LEDS)->setRepetitions(4));
 }
 
+void cleanup() {
+    for (int led = 0 ; led < TOTAL_LEDS ; led++) {
+        digitalWrite(led, LOW);
+    }
+}
+
 void loop() {
     for (int i = 0 ; i < animations.getSize() ; i++) {
+        cleanup();
         animations.get(i)->animate();
     }
 }
