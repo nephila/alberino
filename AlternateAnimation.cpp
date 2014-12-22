@@ -21,4 +21,5 @@ void AlternateAnimation::drawFrame() {
             digitalWrite(led, LOW);
         }  
     }   
+    delay(1000);
 };
