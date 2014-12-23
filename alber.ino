@@ -9,6 +9,7 @@
 
 #include "BlinkAnimation.h"
 #include "AlternateAnimation.h"
+#include "JingleAnimation.h"
 
 unsigned int TOTAL_LEDS = 14;
 SlimArray<Animation*> animations;
@@ -19,6 +20,7 @@ void setup() {
     }
     animations.insert((new BlinkAnimation())->setTotalLeds(TOTAL_LEDS)->setRepetitions(2));
     animations.insert((new AlternateAnimation())->setTotalLeds(TOTAL_LEDS)->setRepetitions(4));
+    animations.insert(((new JingleAnimation())->setTonePin(A0))->setTotalLeds(TOTAL_LEDS)->setRepetitions(1));
 }
 
 void loop() {
