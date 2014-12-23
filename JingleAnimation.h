@@ -2,6 +2,7 @@
 #define JINGLE_ANIMATION_CLASS
 
 #include "Animation.h"
+#define ANIMATION_PAUSE_CYCLES 100
 
 class JingleAnimation: public Animation {
     private:
