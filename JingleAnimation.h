@@ -6,8 +6,10 @@
 class JingleAnimation: public Animation {
     private:
         unsigned int tonePin;
-  
+        unsigned int restartCounter;
+
     public:
+        JingleAnimation() {this->restartCounter = 0;}
         void drawFrame();
         Animation* setTonePin(unsigned int tonePin) {this->tonePin = tonePin; return this; }
 };

@@ -11,6 +11,13 @@
 
 void JingleAnimation::drawFrame() {
 
+    if(this->restartCounter != 0) {
+        this->restartCounter--;
+        return;
+    } else {
+        this->restartCounter = 500;
+    }
+
     int melody[] = {E, E, E, R,
       E, E, E, R,
       E, G, C, D, E, R,
