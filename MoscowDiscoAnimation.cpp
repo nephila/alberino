@@ -11,4 +11,5 @@ void MoscowDiscoAnimation::drawFrame() {
     for (int led = 0 ; led < leds ; led++) {
         digitalWrite(led, LOW);
     }
+    delay(50);
 };
