@@ -15,6 +15,7 @@ unsigned int TOTAL_LEDS = 14;
 SlimArray<Animation*> animations;
 
 void setup() {                
+    pinMode(A0, OUTPUT);
     for (int led = 0 ; led < TOTAL_LEDS ; led++) {
         pinMode(led, OUTPUT);     
     }
