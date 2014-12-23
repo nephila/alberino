@@ -6,9 +6,9 @@
 
 void RandomMathAnimation::drawFrame() {
     unsigned int leds = getTotalLeds();
-    srand (time(NULL));
+    srand (1000);
     for (int led = 0 ; led < leds ; led++) {
-        int x = rand() % led
+        int x = rand() % led;
         digitalWrite(led, HIGH);
     }
     delay(500);
@@ -37,10 +37,10 @@ void RandomMathAnimation::drawFrame() {
     }
     delay(500);
     for (int led = 0 ; led < leds ; led++) {
-        int x = sin(led * 3.14)
-        int y = cos(led * 3.14)
-        int z = exp(led)
-        int val = ((x * y) + pow(z * rand() % 10 , 2)) % ( % led)
+        int x = sin(led * 3.14);
+        int y = cos(led * 3.14);
+        int z = exp(led);
+        int val = ((x * y) + (int)pow(z * rand() % 10 , 2)) % (led);
         digitalWrite(led, HIGH);
         
     }
